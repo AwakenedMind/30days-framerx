@@ -11,5 +11,9 @@
 	"framer": {
 		"id": "10cec6f5-4b2e-4754-8dd5-797fecacd4a3"
 	},
-	"author": "RobertA Arteaga"
+	"author": "RobertA Arteaga",
+	"dependencies": {
+		"@framer/framer.base": "^1.0.0",
+		"@framer/steveruizok.education": "^1.207.0"
+	}
 }
