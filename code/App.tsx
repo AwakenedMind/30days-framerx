@@ -19,70 +19,74 @@
 //     }
 // }
 
-import { Override, Data } from "framer"
-import * as React from "react"
+///
+/// SIGN IN
+///
 
-const appState = Data({
-    emailError: "BLANK_ERROR",
-    passwordError: "BLANK_INPUT",
-})
+// import { Override, Data } from "framer"
+// import * as React from "react"
 
-export function EmailInput(): Override {
-    return {
-        onValueChange: (value: string) => {
-            console.log(value.includes("@"))
+// const appState = Data({
+//     emailError: "BLANK_ERROR",
+//     passwordError: "BLANK_INPUT",
+// })
 
-            appState.emailError =
-                value.length === 0
-                    ? "BLANK_INPUT"
-                    : !value.includes("@") || !value.includes(".com")
-                    ? "WRONG_INPUT"
-                    : ""
-        },
-    }
-}
+// export function EmailInput(): Override {
+//     return {
+//         onValueChange: (value: string) => {
+//             console.log(value.includes("@"))
 
-export function PasswordInput(): Override {
-    return {
-        onValueChange: (value: string) => {
-            console.log(value.includes("@"))
+//             appState.emailError =
+//                 value.length === 0
+//                     ? "BLANK_INPUT"
+//                     : !value.includes("@") || !value.includes(".com")
+//                     ? "WRONG_INPUT"
+//                     : ""
+//         },
+//     }
+// }
 
-            appState.emailError =
-                value.length === 0
-                    ? "BLANK_INPUT"
-                    : value.length < 5
-                    ? "WRONG_INPUT"
-                    : ""
-        },
-    }
-}
+// export function PasswordInput(): Override {
+//     return {
+//         onValueChange: (value: string) => {
+//             console.log(value.includes("@"))
 
-export function EmailError(): Override {
-    const errorMessages = {
-        BLANK_INPUT: "Enter your email address",
-        WRONG_FORMAT: "Enter a valid email address",
-    }
+//             appState.emailError =
+//                 value.length === 0
+//                     ? "BLANK_INPUT"
+//                     : value.length < 5
+//                     ? "WRONG_INPUT"
+//                     : ""
+//         },
+//     }
+// }
 
-    return {
-        visible: appState.emailError !== "",
-        text: errorMessages[appState.emailError],
-    }
-}
+// export function EmailError(): Override {
+//     const errorMessages = {
+//         BLANK_INPUT: "Enter your email address",
+//         WRONG_FORMAT: "Enter a valid email address",
+//     }
 
-export function PasswordError(): Override {
-    const errorMessages = {
-        BLANK_INPUT: "Enter your password",
-        WRONG_FORMAT: "Your password is too short",
-    }
+//     return {
+//         visible: appState.emailError !== "",
+//         text: errorMessages[appState.emailError],
+//     }
+// }
 
-    return {
-        visible: appState.passwordError !== "",
-        text: errorMessages[appState.passwordError],
-    }
-}
+// export function PasswordError(): Override {
+//     const errorMessages = {
+//         BLANK_INPUT: "Enter your password",
+//         WRONG_FORMAT: "Your password is too short",
+//     }
 
-export function ContinueButton(): Override {
-    return {
-        disabled: appState.emailError || appState.passwordError,
-    }
-}
+//     return {
+//         visible: appState.passwordError !== "",
+//         text: errorMessages[appState.passwordError],
+//     }
+// }
+
+// export function ContinueButton(): Override {
+//     return {
+//         disabled: appState.emailError || appState.passwordError,
+//     }
+// }
